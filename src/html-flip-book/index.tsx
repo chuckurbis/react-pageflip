@@ -29,7 +29,7 @@ const HTMLFlipBookForward = React.forwardRef(
         const [pages, setPages] = useState<ReactElement[]>([]);
 
         useImperativeHandle(ref, () => ({
-            pageFlip: () => pageFlip.current,
+            pageFlip: () => pageFlip.current as any,
         }));
 
         const refreshOnPageDelete = useCallback(() => {
