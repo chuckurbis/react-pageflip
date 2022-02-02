@@ -78,11 +78,12 @@ export class Flip {
      */
     public flip(globalPos: Point, hasCheckedJustClick = false): void {
         if ((document as any).JUST_CLICKED) {
-            console.log('JUST CLICKED');
+            // console.log('JUST CLICKED');
             return; // fix bug with double click
-        } else {
-            console.log('NO JUST CLICKED', (document as any).JUST_CLICKED);
-        }
+        } 
+        // else {
+        //     console.log('NO JUST CLICKED', (document as any).JUST_CLICKED);
+        // }
         if (!hasCheckedJustClick) {
             setTimeout(() => {
                 this.flip(globalPos, true);
