@@ -11,7 +11,8 @@
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+        "plugins": [{ "name": "typescript-plugin-css-modules" }],
+        "downlevelIteration": true
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "build", "src/**/*.test.tsx"]

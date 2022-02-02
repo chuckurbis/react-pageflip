@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {
     ReactElement,
     useCallback,
@@ -6,8 +7,10 @@ import React, {
     useRef,
     useState,
 } from 'react';
+import { PageFlip } from '../vendor/page-flip/PageFlip';
+import { FlipSetting } from '../vendor/page-flip/Settings';
 
-import { PageFlip } from 'page-flip';
+
 import { IFlipSetting, IEventProps } from './settings';
 
 interface IProps extends IFlipSetting, IEventProps {
@@ -103,7 +106,7 @@ const HTMLFlipBookForward = React.forwardRef(
                 removeHandlers();
 
                 if (htmlElementRef.current && !pageFlip.current) {
-                    pageFlip.current = new PageFlip(htmlElementRef.current, props);
+                    pageFlip.current = new PageFlip(htmlElementRef.current, props as Partial<FlipSetting>);
                 }
 
                 if (!pageFlip.current.getFlipController()) {
